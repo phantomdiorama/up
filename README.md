@@ -11,13 +11,11 @@
 get up. get on up.
 ```
 
-#  setting up debian
-
-## download and install
+### download
 
 Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/current-live/amd64/iso-hybrid/)
 
-### grab essentials
+### install essentials
 
 ```
 # update
@@ -29,8 +27,6 @@ sudo apt install curl git wget thefuck make
 # gui stuff
 sudo apt install vim-gtk3 vlc timeshift thunderbird audacious
 ```
-
-## set up
 
 ### fzf & z & fuck
 
