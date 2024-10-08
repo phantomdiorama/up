@@ -7,9 +7,9 @@
   \____/  | .__/
           | |
           |_|
-```
 
 get up. get on up.
+```
 
 #  setting up debian
 
