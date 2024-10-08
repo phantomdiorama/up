@@ -1,4 +1,4 @@
-
+```
   _    _
  | |  | |
  | |  | |  _ __
@@ -7,6 +7,7 @@
   \____/  | .__/
           | |
           |_|
+```
 
 get up. get on up.
 
@@ -62,7 +63,7 @@ make && sudo make install
 sudo systemctl enable keyd && sudo systemctl start keyd
 
 # config
-wget https://gist.githubusercontent.com/phantomdiorama/dabd52a0899147830cb92257228ba2f0/raw/d93cab30f330ab50d9c03bba6896335f0e4e224f/default.conf
+wget https://raw.githubusercontent.com/phantomdiorama/up/refs/heads/main/default.conf
 sudo mv default.conf /etc/keyd/default.conf
 sudo keyd reload
 ```
@@ -129,7 +130,3 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 - dropbox
     - may need manual install of dependencies and `apt --fix-broken install`
 
-
----
-
-shortlink: https://is.gd/mydeb
