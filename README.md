@@ -1,17 +1,5 @@
-```
-  _    _
- | |  | |
- | |  | |  _ __
- | |  | | | '_ \
- | |__| | | |_) |
-  \____/  | .__/
-          | |
-          |_|
 
-get up. get on up.
-```
-
-### download
+### get debian
 
 Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/current-live/amd64/iso-hybrid/)
 
@@ -22,7 +10,7 @@ Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/cur
 sudo apt update && sudo apt upgrade
 
 # utilities
-sudo apt install curl git wget thefuck make
+sudo apt install curl git wget thefuck make ffmpeg
 
 # gui stuff
 sudo apt install vim-gtk3 vlc timeshift thunderbird audacious
@@ -74,15 +62,10 @@ mv vimfiles .vim
 chmod +x ~/.vim/plugins.sh
 ~/.vim/plugins.sh
 
-# markdown
-sudo apt install pandoc nodejs npm
+# writing and blogging
+sudo apt install pandoc jpegoptim pngquant nodejs npm
 npm install -g markdownlint-cli
 npm install -g pagedjs-cli
-
-## manual install
-
-# images
-sudo apt install ffmpeg imagemagick jpegoptim pngquant
 ```
 
 ### network share
@@ -108,7 +91,7 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
     - [medium blocking mode](https://github.com/gorhill/ublock/wiki/Blocking-mode:-medium-mode)
 - [Compact mode](https://support.mozilla.org/en-US/kb/compact-mode-workaround-firefox)
     - browser.compactmode.show = true
-- [Prevent Alt invoking menu] (https://support.mozilla.org/en-US/questions/1278533)
+- [Prevent Alt invoking menu](https://support.mozilla.org/en-US/questions/1278533)
     - ui.key.menuAccessKeyFocuses = false
 
 ### non apt
