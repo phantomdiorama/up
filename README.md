@@ -1,44 +1,40 @@
-
-### get debian
+## get debian
 
 Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/current-live/amd64/iso-hybrid/)
 
-### install essentials
+## essentials
 
 ```
-# update
+#update
 sudo apt update && sudo apt upgrade
 
-# utilities
-sudo apt install curl git wget thefuck make ffmpeg
+# get package list
+wget https://raw.githubusercontent.com/phantomdiorama/up/refs/heads/main/packages.txt
 
-# gui stuff
-sudo apt install vim-gtk3 vlc timeshift thunderbird audacious
+#install packages
+xargs -a packages.txt sudo apt-get -y install
 ```
 
-### fzf & z & fuck
+## fzf & z & fuck
 
 ```
-# run all from
-cd ~
-
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# z
-wget https://raw.githubusercontent.com/rupa/z/master/z.sh
-mkdir -p ~/.local/bin && mv z.sh ~/.local/bin/
-echo "source ~/.local/bin/z.sh" >> ~/.bashrc
-
 # thefuck -- installed above
 echo "eval $(thefuck --alias)" >> ~/.bashrc
+
+# z
+wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+mkdir -p ~/.z && mv z.sh ~/.z/
+echo "source ~/.z/z.sh" >> ~/.bashrc
 
 # reload bashrc
 source ~/.bashrc
 ```
 
-### keyd
+## keyd
 
 ```
 git clone -b v2.4.3 https://github.com/rvaiya/keyd.git
@@ -52,28 +48,18 @@ sudo mv default.conf /etc/keyd/default.conf
 sudo keyd reload
 ```
 
-### vim & writing & blog
+## vim
 
 ```
-# vim
-sudo apt install moreutils wbritish
 git clone https://github.com/phantomdiorama/vimfiles.git
 mv vimfiles .vim
 chmod +x ~/.vim/plugins.sh
 ~/.vim/plugins.sh
-
-# writing and blogging
-sudo apt install pandoc jpegoptim pngquant nodejs npm
-npm install -g markdownlint-cli
-npm install -g pagedjs-cli
 ```
 
-### network share
+## network share
 
 ```
-# install utils
-sudo apt install cifs-utils
-
 # make share folder
 sudo mkdir /mnt/nas
 
@@ -84,28 +70,19 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 //Syn/NAS /mnt/nas cifs username={REMOTEUSER},password={REMOTEPASS},uid={LOCALUSER},x-systemd.automount 0 0
 ```
 
-### firefox
+## non apt
+- [dropbox](https://linux.dropbox.com/packages/debian/)
+- [firefox dev](https://www.mozilla.org/en-US/firefox/developer/) 
+- [hugo](https://github.com/gohugoio/hugo)
+- [lychee](https://github.com/lycheeverse/lychee)
+- [markdownlint](https://github.com/igorshubovych/markdownlint-cli) 
+- [typos](https://github.com/crate-ci/typos/releases)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
-- [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
-    - [medium blocking mode](https://github.com/gorhill/ublock/wiki/Blocking-mode:-medium-mode)
-- [Compact mode](https://support.mozilla.org/en-US/kb/compact-mode-workaround-firefox)
-    - browser.compactmode.show = true
-- [Prevent Alt invoking menu](https://support.mozilla.org/en-US/questions/1278533)
-    - ui.key.menuAccessKeyFocuses = false
-
-### non apt
-- [Dropbox](https://linux.dropbox.com/packages/debian/)
- - [Fade In](https://www.fadeinpro.com/)
- - [Typos](https://github.com/crate-ci/typos/releases)
- - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-
-### troubleshooting & bugs
+## troubleshooting & bugs
 
 - timeshift
     - install `pkexec` if no gui
-- usb microphone
-    - plug in *after* login if not recognised
 - dropbox
     - may need manual install of dependencies and `apt --fix-broken install`
 
