@@ -27,8 +27,8 @@ echo "eval $(thefuck --alias)" >> ~/.bashrc
 
 # z
 wget https://raw.githubusercontent.com/rupa/z/master/z.sh
-mkdir -p ~/.z && mv z.sh ~/.z/
-echo "source ~/.z/z.sh" >> ~/.bashrc
+mv z.sh /usr/local/bin
+echo "source /usr/local/bin/z.sh" >> ~/.bashrc
 
 # reload bashrc
 source ~/.bashrc
