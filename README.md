@@ -27,8 +27,8 @@ echo "eval $(thefuck --alias)" >> ~/.bashrc
 
 # z
 wget https://raw.githubusercontent.com/rupa/z/master/z.sh
-mv z.sh /usr/local/bin
-echo "source /usr/local/bin/z.sh" >> ~/.bashrc
+mv z.sh ~/.local/bin
+echo "source ~/.local/bin/z.sh" >> ~/.bashrc
 
 # reload bashrc
 source ~/.bashrc
@@ -72,7 +72,7 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 
 ## non apt
 - [dropbox](https://linux.dropbox.com/packages/debian/)
-- [firefox dev](https://www.mozilla.org/en-US/firefox/developer/) 
+- [htmlq](https://github.com/mgdm/htmlq) 
 - [hugo](https://github.com/gohugoio/hugo)
 - [lychee](https://github.com/lycheeverse/lychee)
 - [markdownlint](https://github.com/igorshubovych/markdownlint-cli) 
