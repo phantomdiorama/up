@@ -5,13 +5,13 @@ Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/cur
 ## essentials
 
 ```
-#update
+# update
 sudo apt update && sudo apt upgrade
 
 # get package list
 wget https://raw.githubusercontent.com/phantomdiorama/up/refs/heads/main/packages.txt
 
-#install packages
+# install packages
 xargs -a packages.txt sudo apt-get -y install
 ```
 
@@ -22,13 +22,13 @@ xargs -a packages.txt sudo apt-get -y install
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-# thefuck -- installed above
-echo "eval $(thefuck --alias)" >> ~/.bashrc
-
 # z
 wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 mv z.sh ~/.local/bin
 echo "source ~/.local/bin/z.sh" >> ~/.bashrc
+
+# thefuck (add to bashrc don’t echo)
+eval $(thefuck --alias)
 
 # reload bashrc
 source ~/.bashrc
@@ -71,18 +71,24 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 ```
 
 ## non apt
+
 - [dropbox](https://linux.dropbox.com/packages/debian/)
 - [htmlq](https://github.com/mgdm/htmlq) 
 - [hugo](https://github.com/gohugoio/hugo)
 - [lychee](https://github.com/lycheeverse/lychee)
-- [markdownlint](https://github.com/igorshubovych/markdownlint-cli) 
+- [markdownlint](https://github.com/igorshubovych/markdownlint-cli) ^
 - [typos](https://github.com/crate-ci/typos/releases)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+
+## firefox addons 
+
+- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) 
+- [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/)
 
 ## troubleshooting & bugs
 
 - timeshift
-    - install `pkexec` if no gui
+    - install `pkexec` if no gui (fixed in 12.8)
 - dropbox
     - may need manual install of dependencies and `apt --fix-broken install`
 
