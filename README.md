@@ -73,14 +73,15 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 ## non apt
 
 - [dropbox](https://linux.dropbox.com/packages/debian/)
-- [htmlq](https://github.com/mgdm/htmlq) 
+- [go](https://go.dev/)
+- [htmlq](https://github.com/mgdm/htmlq)
 - [hugo](https://github.com/gohugoio/hugo)
 - [lychee](https://github.com/lycheeverse/lychee)
 - [markdownlint](https://github.com/igorshubovych/markdownlint-cli) ^
 - [typos](https://github.com/crate-ci/typos/releases)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
-## firefox addons 
+## firefox addons
 
 - [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) 
 - [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/)
