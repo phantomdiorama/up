@@ -80,6 +80,7 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 - [markdownlint](https://github.com/igorshubovych/markdownlint-cli) ^
 - [typos](https://github.com/crate-ci/typos/releases)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [speedtest](https://www.speedtest.net/apps/cli)
 
 ## firefox addons
 
