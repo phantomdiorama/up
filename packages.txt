@@ -23,3 +23,5 @@ vim-gtk3
 vlc
 wbritish
 xdotool
+rofi
+mtpaint
