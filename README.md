@@ -81,6 +81,7 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 - [typos](https://github.com/crate-ci/typos/releases)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [speedtest](https://www.speedtest.net/apps/cli)
+- [fail2ban](https://pimylifeup.com/raspberry-pi-fail2ban/)
 
 ## firefox addons
 
