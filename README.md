@@ -1,6 +1,7 @@
 ## get debian
 
-Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/current-live/amd64/iso-hybrid/)
+Download ISO from
+[aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/current-live/amd64/iso-hybrid/)
 
 ## essentials
 
@@ -8,16 +9,9 @@ Download ISO from [aarnet mirror](https://mirror.aarnet.edu.au/pub/debian-cd/cur
 # update
 sudo apt update && sudo apt upgrade
 
-# get package list
-wget https://raw.githubusercontent.com/phantomdiorama/up/refs/heads/main/packages.txt
-
 # install packages
-xargs -a packages.txt sudo apt-get -y install
-```
+cifs-utils curl git make thefuck thunderbird timeshift vim-gtk3
 
-## fzf & z & fuck
-
-```
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -27,22 +21,14 @@ wget https://raw.githubusercontent.com/rupa/z/master/z.sh
 mv z.sh ~/.local/bin
 echo "source ~/.local/bin/z.sh" >> ~/.bashrc
 
-# thefuck (add to bashrc don’t echo)
-eval $(thefuck --alias)
+# keyd
 
-# reload bashrc
-source ~/.bashrc
-```
-
-## keyd
-
-```
 git clone -b v2.4.3 https://github.com/rvaiya/keyd.git
 cd keyd
 make && sudo make install
 sudo systemctl enable keyd && sudo systemctl start keyd
 
-# config
+## config
 wget https://raw.githubusercontent.com/phantomdiorama/up/refs/heads/main/default.conf
 sudo mv default.conf /etc/keyd/default.conf
 sudo keyd reload
@@ -60,7 +46,7 @@ chmod +x ~/.vim/plugins.sh
 ## network share
 
 ```
-# make share folder
+# make share folder.
 sudo mkdir /mnt/nas
 
 # mount manually to check
@@ -73,25 +59,7 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 ## non apt
 
 - [dropbox](https://linux.dropbox.com/packages/debian/)
-- [go](https://go.dev/)
-- [htmlq](https://github.com/mgdm/htmlq)
-- [hugo](https://github.com/gohugoio/hugo)
-- [lychee](https://github.com/lycheeverse/lychee)
-- [markdownlint](https://github.com/igorshubovych/markdownlint-cli) ^
-- [typos](https://github.com/crate-ci/typos/releases)
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-- [speedtest](https://www.speedtest.net/apps/cli)
-- [fail2ban](https://pimylifeup.com/raspberry-pi-fail2ban/)
-
-## firefox addons
-
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) 
+    - `apt --fix-broken install`
+- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 - [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/)
-
-## troubleshooting & bugs
-
-- timeshift
-    - install `pkexec` if no gui (fixed in 12.8)
-- dropbox
-    - may need manual install of dependencies and `apt --fix-broken install`
 
