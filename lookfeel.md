@@ -1,10 +1,9 @@
 # look and feel
 
 ## essentials
-`rofi xdotool`
+`rofi xdotool papirus-icon-theme`
 
 ## theme
-- papirus-icon-theme
 - [wallpaper](https://www.davidrevoy.com/article1058/2025)
 
 ## shortcuts

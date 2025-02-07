@@ -1,3 +1,5 @@
+# get set up
+
 ## get debian
 
 Download ISO from
@@ -10,7 +12,7 @@ Download ISO from
 sudo apt update && sudo apt upgrade
 
 # install packages
-cifs-utils curl git make thefuck thunderbird timeshift vim-gtk3
+cifs-utils curl git make thefuck thunderbird timeshift moreutils
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -34,15 +36,6 @@ sudo mv default.conf /etc/keyd/default.conf
 sudo keyd reload
 ```
 
-## vim
-
-```
-git clone https://github.com/phantomdiorama/vimfiles.git
-mv vimfiles .vim
-chmod +x ~/.vim/plugins.sh
-~/.vim/plugins.sh
-```
-
 ## network share
 
 ```
@@ -56,10 +49,12 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 //Syn/NAS /mnt/nas cifs username={REMOTEUSER},password={REMOTEPASS},uid={LOCALUSER},x-systemd.automount 0 0
 ```
 
-## non apt
+## non-apt
 
 - [dropbox](https://linux.dropbox.com/packages/debian/)
-    - `apt --fix-broken install`
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
-- [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/)
+    - might need `apt --fix-broken install`
 
+## next
+
+- [Look and feel](lookfeel.md)
+- [Programminh and blog](progblog.md)

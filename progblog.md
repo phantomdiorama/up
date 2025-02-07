@@ -2,12 +2,11 @@
 
 ## essentials
 
-`black diction pandoc pylint python3-bs4 python3-requests moreutils`
+`geany geany-plugins black pandoc pylint python3-bs4 python3-requests`
 
 ## non apt
 
 - [go](https://go.dev/)
-- [htmlq](https://github.com/mgdm/htmlq)
 - [hugo](https://github.com/gohugoio/hugo)
 - [lychee](https://github.com/lycheeverse/lychee)
 - [markdownlint](https://github.com/igorshubovych/markdownlint-cli) ^
