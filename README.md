@@ -1,4 +1,4 @@
-# get set up
+# up :balloon:
 
 ## get debian
 
@@ -12,7 +12,7 @@ Download ISO from
 sudo apt update && sudo apt upgrade
 
 # install packages
-cifs-utils curl git make thefuck thunderbird timeshift moreutils
+cifs-utils curl git make thefuck thunderbird timeshift
 
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -56,5 +56,6 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 
 ## next
 
-- [Look and feel](lookfeel.md)
+- [Look and Feel](lookfeel.md)
+- [Multimedia](media.md)
 - [Programminh and blog](progblog.md)

@@ -1,10 +1,16 @@
-# programminng and blog
+# programming and blog
 
 ## essentials
 
-`geany geany-plugins black pandoc pylint python3-bs4 python3-requests`
+`vim-gtk3 python3-bs4 python3-requests moreutils`
 
-## non apt
+## lint
+`black pylint shellcheck shfmt`
+
+## blog/writing
+`pandoc diction par fonts-courier-prime `
+
+## non-apt
 
 - [go](https://go.dev/)
 - [hugo](https://github.com/gohugoio/hugo)
