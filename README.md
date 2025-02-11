@@ -58,4 +58,4 @@ sudo mount -t cifs //Syn/NAS /mnt/nas -o username={REMOTEUSER},password={REMOTEP
 
 - [Look and Feel](lookfeel.md)
 - [Multimedia](media.md)
-- [Programminh and blog](progblog.md)
+- [Programming and blog](progblog.md)
